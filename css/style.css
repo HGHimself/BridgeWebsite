@@ -1,0 +1,430 @@
+/*
+*
+*** GLOBAL COLORS
+*
+*/
+
+:root {
+
+  --greenFelt: #076324;
+  --wood: #C1802F;
+  --goldTrim: #D4AF37;
+
+  --lightGrey: #C0C0C0;
+  --grey: #707070;
+  --darkGrey: #606060;
+
+  --lightRed: #BB1C1C;
+  --red: #901C1C;
+  --darkRed: #5D1C1C;
+
+  --lightBlack: #383b3e;
+  --black: #1C1C1C;
+
+  --white: #E0E0E0;
+
+  --lightGreen: #E0FFE0;
+}
+
+
+/*
+*
+*** NAVBAR
+*
+*/
+
+.topnav {
+  overflow: hidden;
+  background-color: var(--black);
+  border: 2px solid var(--goldTrim);
+  border-radius: 0.3em;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  display: block;
+  color: var(--white);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* active links are red, from nav.php the current directory is active */
+.topnav a.active {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+/* on hover, lighten up background to grey */
+.topnav a:hover:not(.active) {
+    background-color: var(--lightBlack);
+    color: var(--white);
+}
+
+.dropdown {
+    overflow: hidden;
+}
+
+.right {
+  float: right;
+}
+
+.left  {
+  float: left;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: var(--white);
+    padding: 14px 16px;
+    font-family: inherit;
+    margin: 0;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+    color: var(--white);
+    background-color: var(--lightBlack);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: var(--black);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--lightBlack);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*
+*
+*** HEADER
+*
+*/
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  background: var(--greenFelt);
+  border: 2px solid var(--goldTrim);
+  border-radius: 0.3em;
+}
+
+/* make header h1 huge */
+.header h1 {
+  font-size: 50px;
+}
+
+.header h2 {
+  font-size: 40px;
+}
+
+.header h3 {
+  font-size: 20px;
+}
+
+.headDiv  {
+  background-color: var(--white);
+}
+
+
+/* all header tags are black */
+h1 ,h2, h4, h5, h6  {
+  color: var(--black);
+}
+
+
+/*
+*
+*** BODY
+*
+*/
+
+* {
+  font-family: "Averia Serif Libre";
+  box-sizing: border-box;
+}
+
+/* give the body a small padding and make the wood background image static */
+body {
+  padding: 10px;
+  background: var(--wood);
+  background-image:url("https://www.publicdomainpictures.net/pictures/190000/velka/wood-background-02.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* make the background look like a typical felt card table */
+main {
+  background: var(--greenFelt);
+  border: 2px solid var(--goldTrim);
+  border-radius: 0.3em;
+  padding: 1em;
+  margin: auto;
+  /* max-width:1000px;  page is 800 pixels at most */
+  width: 80%;
+}
+
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Create two equal columns that floats next to each other */
+.twocolumn {
+  float: left;
+  width: 50%;
+}
+
+.threecolumn  {
+  float: left;
+  margin-left: 4.15%;
+  margin-right: 4.15%;
+  width: 24%;
+}
+
+/* for full week display, make a day 1/7 of the full width */
+.day {
+  float: left;
+  width: 14.28%;
+  border: 1px solid var(--goldTrim);
+  background-color: var(--white);
+
+}
+
+/* Set full-width to expand the whole page */
+.dayContainer {
+    width: 100%;
+}
+
+/* not a day in the current month (for calendar) */
+.notMonth {
+  background-color: var(--lightGrey);
+  height: 100px;
+}
+
+/* if the calendar day is today, make it stand out */
+.isToday {
+  background-color: var(--lightGreen);
+  height: 100px;
+}
+
+/* if the calendar day is today, make it stand out */
+.isMonth {
+  height: 100px;
+}
+
+/* make the div be centered in the container */
+.center {
+  margin: auto;
+}
+
+/* center anything inside the div */
+.centerText {
+  text-align: center;
+}
+
+.rightText {
+  text-align: right;
+}
+
+.leftText {
+  text-align: left;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: var(--white);
+  padding: 20px;
+  margin-top: 20px;
+  border: 2px solid var(--black);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* when the calendar has empty spots, fill with grey */
+.calendar  {
+  background-color: var(--darkGrey);
+  border: 2px solid var(--black);
+}
+
+/* make day header will stand out from white background */
+.dayHeader  {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.redSuit  {
+  color: var(--red);
+}
+
+.blackSuit  {
+  color: var(--black);
+}
+
+/* TABLE STUFF */
+
+table, th, td {
+  color: var(--white);
+
+
+}
+table {
+  border-collapse: collapse;
+  border: 2px solid var(--goldTrim);
+}
+th, td {
+  border-bottom: 1px solid var(--goldTrim);
+  height: 20px;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  text-align: left;
+  background-color: var(--darkGrey);
+  color: var(--white);
+}
+td {
+  vertical-align: bottom;
+  text: var(--white);
+}
+
+tr:nth-child(even) {background-color: var(--red);}
+tr:nth-child(odd) {background-color: var(--black);}
+tr:hover {background-color: var(--grey);}
+
+
+/* Form stuff */
+form  {
+  font-family: "Averia Serif Libre";
+}
+
+form label  {
+  float: left;
+}
+
+form input, form label, form select {
+  display: inline-block;
+  font-family: "Averia Serif Libre";
+  color: var(--black);
+  border-radius: 5px;
+}
+
+
+form input, form select{
+  border: 2px solid var(--goldTrim);
+  background-color: var(--white);
+  float: right;
+}
+
+textarea {
+	width: 400px;
+	height: 120px;
+	padding: 5px;
+  order: 2px solid var(--goldTrim);
+  background-color: var(--white);
+  font-family: "Averia Serif Libre";
+  float: right;
+}
+
+form button  {
+  font-family : inherit;
+  border-radius: 5px;
+  color: var(--black);
+  border: 2px solid var(--goldTrim);
+  background-color: var(--white);
+}
+
+
+/*
+*
+*** FOOTER
+*
+*/
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: var(--greenFelt);
+  border: 2px solid var(--goldTrim);
+  border-radius: 0.3em;
+  margin-top: 20px;
+}
+
+/*
+*
+*** MEDIA
+*
+*/
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+  textarea#textArea {
+    width: 300px;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+  textarea#textArea {
+  	width: 200px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .day {
+    width: 100%;
+    padding: 0;
+  }
+
+}

@@ -3,11 +3,9 @@
 session_start();
 
 if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == TRUE)  {
-  echo "<h2>We are logged in y'all</h2>";
   $_SESSION["loggedIn"] = TRUE;   //redundant
 }
 else  {
-  echo "<h2>We aren't logged in y'all</h2>";
   $_SESSION["loggedIn"] = FALSE;
 }
 

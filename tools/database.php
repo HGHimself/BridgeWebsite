@@ -15,7 +15,7 @@ function removeById($tableName, $id)  {
   $mysqli = setUpConnection();
   if(!$mysqli)  $message = 'The connection didnt work!';
   else  {
-    $sql = "DELETE FROM ". $tableName ." WHERE ID=" . $id;
+    $sql = "DELETE FROM ". $tableName ." WHERE id=" . $id;
 
     if ($mysqli->query($sql) === TRUE)  $message = "Record deleted successfully";
     else  $message = "Error deleting record: " . $mysqli->error;

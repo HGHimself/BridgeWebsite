@@ -1,4 +1,4 @@
-<div class="topnav">
+<div class="topnav _whole center">
   <nav>
     <?php
     if(isset($_SESSION['loggedIn']) && $_SESSION["loggedIn"] == TRUE)  $login = "Logout of " . $_SESSION['name'];
@@ -8,6 +8,7 @@
             "" => "Home",
             //"reservations/" => "Reservations",
             //"calendar/" => "Calendar",
+            "posts/" => "Posts",
             "results/" => "Game Results",
             "auth/" => $login,
             "schedule/" => "Schedule",
